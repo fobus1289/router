@@ -4,6 +4,7 @@
   "license": "MIT",
   "description": "fast router!",
   "minimum-stability": "alpha",
+  "version": "1.0",
   "keywords": [
     "uzb",
     "router",
