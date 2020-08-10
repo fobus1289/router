@@ -1,5 +1,7 @@
 {
   "name": "xotam/uzbrouter",
+  "type":    "library",
+  "license": "MIT",
   "description": "fast router!",
   "keywords": [
     "uzb",
@@ -7,20 +9,16 @@
     "php",
     "fast"
   ],
-  "license": "MIT",
-
+  "require": {
+    "ext-json": "*",
+    "php": "^7.4"
+  },
   "autoload": {
     "classmap": ["src/"]
   },
-  "version": "1.0.0",
-  "minimum-stability": "dev",
   "scripts": {
     "post-install-cmd": [
       "UZB\\ROUTER\\Init\\Install::run"
     ]
-  },
-  "require": {
-    "ext-json": "*",
-    "php": "^7.4"
   }
 }
