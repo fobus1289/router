@@ -1,0 +1,36 @@
+<?php
+
+use UZB\ROUTER\Configure;
+use UZB\ROUTER\Route;
+
+require_once '../vendor/autoload.php';
+
+//header('Access-Control-Allow-Origin: *');
+//header('Access-Control-Allow-Methods: *');
+//header('Content-type: application/json');
+
+Configure::configure();
+
+Configure::setting(
+    dirname(dirname(__FILE__)),
+    '/app/config/route_container.php'
+);
+
+
+Route::run(function ($result, $exception) {
+
+    /**
+     * @var Throwable $exception
+     */
+    if ($exception !== null) {
+        @header("HTTP/1.0 {$exception->getCode()} text");
+        print json_encode([
+            'msg' => $exception->getMessage(),
+            'code' => $exception->getCode(),
+        ]);
+
+    } else if ($result !== null) {
+        print json_encode($result);
+    }
+
+});

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="07f3f415-1c13-4a1a-ae2d-665cc0a4319b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1fnewhNuAItK2vqTLRcOgRb7Gzy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/init/public" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\OpenServer\domains\uzbrouter\src\request\base" />
+      <recent name="D:\OpenServer\domains\uzbrouter\src\route" />
+      <recent name="D:\OpenServer\domains\uzbrouter\src\request\traits" />
+      <recent name="D:\OpenServer\domains\uzbrouter\src\request" />
+      <recent name="D:\OpenServer\domains\uzbrouter\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\OpenServer\domains\uzbrouter\src\init\public" />
+      <recent name="D:\OpenServer\domains\uzbrouter\src\init" />
+      <recent name="D:\OpenServer\domains\uzbrouter" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="07f3f415-1c13-4a1a-ae2d-665cc0a4319b" name="Default Changelist" comment="" />
+      <created>1596858523298</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596858523298</updated>
+      <workItem from="1596858524420" duration="24000" />
+      <workItem from="1596858637501" duration="30843000" />
+      <workItem from="1596958762161" duration="28890000" />
+      <workItem from="1597041843227" duration="8817000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="446" y="22" key="#com.intellij.ide.util.MemberChooser" timestamp="1597048271592">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="446" y="22" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1597048271592" />
+    <state x="489" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1596979956375">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="489" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1596979956375" />
+    <state x="371" y="95" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597043065980">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="95" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1597043065980" />
+    <state x="411" y="109" key="NewPhpClassDialog" timestamp="1596986816316">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="411" y="109" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1596986816316" />
+    <state x="477" y="264" key="NewPhpFileDialog" timestamp="1596863745263">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="477" y="264" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1596863745263" />
+  </component>
+</project>

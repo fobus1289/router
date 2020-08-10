@@ -1,0 +1,120 @@
+<?php
+
+use UZB\ROUTER\Route;
+
+$expect = function () {
+    return [
+        'construct' => [
+            stdClass::class
+        ],
+        'method' => [
+            TestRequest::class
+        ]
+    ];
+};
+
+Route::fast('/')
+    ->post('index')
+    // or u can use\UZB\ROUTER\Request
+    ->namespace(TestController::class)
+    //if dynamic bind parameters new objects constructor and method
+    ->dynamic() //reflect api slow
+    // if expect you bin parameters object
+    ->expect($expect) // fast
+
+    ->middleware([
+        TestMiddleWare::class,
+        //... other middleware
+    ])
+    ->done();
+
+//example middleWare need namespace
+class TestMiddleWare implements \UZB\ROUTER\Base\IMiddleWare
+{
+    public function handle(\UZB\ROUTER\Request $request ,\Throwable &$exception = null): void
+    {
+        if ($request->role !== 'admin') {
+            $exception = new Exception('Forbidden',403);
+        }
+    }
+}
+
+//example controller need namespace
+class TestController
+{
+    private $object = null;
+
+    public function __construct(stdClass $class)
+    {
+        $this->object = $class;
+    }
+
+    public function index(TestRequest $request)
+    {
+        $user = new stdClass();
+
+        $user->login = $request->login;
+        $user->password = $request->password;
+        $user->age = $request->age;
+        $user->salary = $request->salary;
+
+        return json_encode(
+            [
+                'message' => 'hello world',
+                'user' => $user,
+            ]
+        );
+    }
+}
+
+//example request need namespace
+class TestRequest extends \UZB\ROUTER\Request
+{
+
+    public function rules(\UZB\ROUTER\Base\IValidator $validator)
+    {
+        // login valid
+        $validator->required('login')
+            ->min('login', 4)
+            ->max('login', 32)
+        // password valid
+        ->required('password')
+            ->min('password', 6)
+            ->max('password', 32)
+        ->confirmation('password', 'password2')
+        // age valid
+        ->required('age')
+            ->isNumber('age')
+        // salary valid
+        ->required('salary');
+    }
+
+    protected function messages()
+    {
+        return [
+
+            'login.required' => 'Login cannot be empty',
+            'login.min' => 'Login cannot be shorter than 4 characters',
+            'login.max' => 'Login cannot exceed 32 characters',
+
+            'password.required' => 'Password cannot be empty',
+            'password.min' => 'Password cannot be shorter than 4 characters',
+            'password.max' => 'Password cannot exceed 32 characters',
+            'password.confirmation' => 'Passwords dont match',
+
+            'age.required' => 'Age cannot be empty',
+            'age.isNumber' => 'Age must be a number',
+
+            'salary.required' => 'Salary cannot be empty',
+
+        ];
+    }
+
+    //if error
+    protected function error($array)
+    {
+        //you Exception
+        throw new \Exception(json_encode($array), 403);
+    }
+
+}

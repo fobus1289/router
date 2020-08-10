@@ -1,0 +1,26 @@
+{
+  "name": "uzb/router",
+  "description": "fast router!",
+  "keywords": [
+    "uzb",
+    "router",
+    "php",
+    "fast"
+  ],
+  "license": "MIT",
+
+  "autoload": {
+    "classmap": ["src/"]
+  },
+  "version": "1.0.0",
+  "minimum-stability": "dev",
+  "scripts": {
+    "post-update-cmd": [
+      "UZB\\ROUTER\\Init\\Install::run"
+    ]
+  },
+  "require": {
+    "ext-json": "*",
+    "php": "^7.4"
+  }
+}
