@@ -1,5 +1,5 @@
 {
-  "name": "uzb/router",
+  "name": "xotam/uzbrouter",
   "description": "fast router!",
   "keywords": [
     "uzb",
@@ -15,7 +15,7 @@
   "version": "1.0.0",
   "minimum-stability": "dev",
   "scripts": {
-    "post-update-cmd": [
+    "post-install-cmd": [
       "UZB\\ROUTER\\Init\\Install::run"
     ]
   },
