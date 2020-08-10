@@ -3,6 +3,7 @@
   "type":    "library",
   "license": "MIT",
   "description": "fast router!",
+  "minimum-stability": "alpha",
   "keywords": [
     "uzb",
     "router",
